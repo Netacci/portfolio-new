@@ -26,7 +26,10 @@ const Banner = () => {
             flexDirection: { lg: 'row', xs: 'column' },
             gap: 1,
             justifyContent: 'center',
+            alignItems: 'center',
+
             mt: '10px',
+            mx: 'auto',
           }}
         >
           <Box sx={{ display: 'flex', gap: '4px', alignItems: 'center' }}>

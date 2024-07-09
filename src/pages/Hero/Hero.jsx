@@ -91,6 +91,12 @@ const Hero = () => {
               Read Articles
             </Button>
             <Button
+              onClick={() =>
+                window.open(
+                  'https://drive.google.com/file/d/10KN7khb54xcHAx0_DUQJmnwfKSDkWI5p/view?usp=sharing',
+                  '_blank'
+                )
+              }
               sx={{
                 background: '#FFF0F2',
                 color: '#2B2D42',

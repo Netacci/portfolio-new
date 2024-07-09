@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { projects } from '../../data/project';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
@@ -20,19 +21,22 @@ const Projects = () => {
         >
           Some of the stuff I&apos;ve built
         </Typography>
-        <Box
-          sx={{
+        <motion.div
+          style={{
             display: 'flex',
             flexWrap: 'wrap',
             gap: 5,
             flexDirection: 'row',
             justifyContent: 'space-around',
           }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
         >
           {projects.map((project) => (
             <ProjectCard project={project} key={project.name} />
           ))}
-        </Box>
+        </motion.div>
       </Box>
     </Box>
   );

@@ -2,6 +2,7 @@ import { Box, Button, Typography } from '@mui/material';
 import HeroImage from '../../assets/hero.png';
 import Elipse from '../../assets/Ellipse-s.png';
 import BigEllipse from '../../assets/Ellipse.png';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
@@ -41,13 +42,16 @@ const Hero = () => {
           >
             (Backend development in the works, technical writer by night)
           </Typography>
-          <Typography
-            sx={{
+          <motion.p
+            style={{
               color: '#2b2d42',
               lineHeight: '32px',
-              mt: '10px',
+              marginTop: '10px',
               textAlign: 'justify',
             }}
+            initial={{ opacity: 0, y: 200 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             I started my software development career learning JavaScript and
             then advanced to ReactJS and NextJs, creating user-friendly
@@ -59,7 +63,7 @@ const Hero = () => {
             leading an engineering team and successfully launching a product. I
             also enjoy technical writing as I like to document my processes for
             future reference.
-          </Typography>
+          </motion.p>
           <Typography
             sx={{ color: '#2b2d42', lineHeight: '24px', mt: '20px' }}
           ></Typography>
@@ -130,10 +134,13 @@ const Hero = () => {
               top: '4%',
             }}
           >
-            <img
+            <motion.img
               src={Elipse}
               style={{ maxWidth: '100%', width: '47%' }}
               alt='profile'
+              initial={{ opacity: 0, y: 200 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
             />
           </Box>
           <Box
@@ -144,10 +151,13 @@ const Hero = () => {
               bottom: '0%',
             }}
           >
-            <img
+            <motion.img
               src={BigEllipse}
               style={{ maxWidth: '100%', width: '47%' }}
               alt='profile'
+              initial={{ opacity: 0, y: 200 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
             />
           </Box>
           <Box>

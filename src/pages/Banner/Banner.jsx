@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 const Banner = () => {
   return (
     <Box sx={{ background: '#edf2f4' }} id='contact'>
-      <Box sx={{ px: 5, textAlign: 'center', py: 5 }}>
+      <Box sx={{ px: { lg: 5, xs: 2 }, textAlign: 'center', py: 5 }}>
         <Typography
           sx={{ color: '#d90429', fontSize: '1rem', fontWeight: '600' }}
         >
@@ -23,7 +23,7 @@ const Banner = () => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: { lg: 'row', xs: 'column' },
             gap: 1,
             justifyContent: 'center',
             mt: '10px',

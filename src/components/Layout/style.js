@@ -26,7 +26,7 @@ export const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    px: 5,
+    px: { lg: 5, xs: 2 },
     position: 'fixed',
     transition: 'all 0.2s ease',
     zIndex: 10,

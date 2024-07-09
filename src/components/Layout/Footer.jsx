@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 const Footer = () => {
   return (
     <Box sx={{ background: '#2B2D42' }}>
-      <Box sx={{ px: 5, py: '30px', textAlign: 'center' }}>
+      <Box sx={{ px: { lg: 5, xs: 2 }, py: '30px', textAlign: 'center' }}>
         <Typography sx={{ color: '#ffffff' }}>Follow me on Socials</Typography>
         <Box
           sx={{

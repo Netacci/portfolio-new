@@ -4,7 +4,7 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 const Projects = () => {
   return (
-    <Box sx={{ px: 5, mt: '30px' }} id='projects'>
+    <Box sx={{ px: { lg: 5, xs: 2 }, mt: '30px' }} id='projects'>
       <Box>
         <Typography sx={{ textAlign: 'center', color: '#D90429' }}>
           Projects

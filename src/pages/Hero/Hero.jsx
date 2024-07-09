@@ -9,7 +9,7 @@ const Hero = () => {
       <Box
         sx={{
           py: '30px',
-          px: 5,
+          px: { lg: 5, xs: 2 },
           display: 'flex',
           gap: 5,
           alignItems: 'center',
@@ -41,7 +41,14 @@ const Hero = () => {
           >
             (Backend development in the works, technical writer by night)
           </Typography>
-          <Typography sx={{ color: '#2b2d42', lineHeight: '32px', mt: '10px' }}>
+          <Typography
+            sx={{
+              color: '#2b2d42',
+              lineHeight: '32px',
+              mt: '10px',
+              textAlign: 'justify',
+            }}
+          >
             I started my software development career learning JavaScript and
             then advanced to ReactJS and NextJs, creating user-friendly
             solutions tailored to clients&apos; needs. I call myself the

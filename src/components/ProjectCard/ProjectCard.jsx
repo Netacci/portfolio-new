@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
   };
   return (
     <Box
-      sx={{ cursor: 'pointer', width: '500px', mt: '10px' }}
+      sx={{ cursor: 'pointer', width: { md: '500px', xs: '100%' }, mt: '10px' }}
       onClick={() => window.open(project.live, '_blank')}
     >
       <img style={{ width: '100%' }} src={project.image} alt={project.name} />
@@ -19,13 +19,20 @@ const ProjectCard = ({ project }) => {
         {project.name}
       </Typography>
       <Typography>{project.description}</Typography>
-      <Box sx={{ display: 'flex', gap: 1, my: '10px' }}>
+      <Box sx={{ display: 'flex', gap: 1, my: '10px', flexWrap: 'wrap' }}>
         {project.tags.map((tag) => (
           <Chip label={tag} key={tag} />
         ))}
       </Box>
 
-      <Box sx={{ display: 'flex', gap: 1, my: '10px' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          gap: 1,
+          my: '10px',
+          flexDirection: { xs: 'column', md: 'row' },
+        }}
+      >
         <Button
           sx={{
             background: '#fff0f2',

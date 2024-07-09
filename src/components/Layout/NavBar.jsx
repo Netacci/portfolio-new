@@ -96,6 +96,7 @@ const NavBar = () => {
               sx={styles.navStyle}
               style={{ marginTop: '20px' }}
               key={nav.title}
+              onClick={() => setOpenNav(false)}
             >
               {nav.title}
             </Typography>

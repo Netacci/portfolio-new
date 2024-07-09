@@ -33,11 +33,11 @@ export const projects = [
   {
     name: 'Parivest website',
     description:
-      'For this project. I developed the company website and implemented Contentful to host the blog content. Additionally, I built the web admin dashboard, which allows administrators to view and manage all user details efficiently. While the repository is company-owned and private, this project showcases my ability to integrate content management systems and create comprehensive admin interfaces. The admin dashboard is built with ReactJS and state management is handled with redux toolkit',
+      'For this project. I developed the company website and integrated Contentful to host the blog content. Additionally, I built the web admin dashboard, which allows admins to view and manage all user details efficiently. While the repository is company-owned and private, this project showcases my ability to integrate CMS and create comprehensive admin UI. The admin dashboard is built with ReactJS and state management is handled with redux toolkit',
 
     live: 'https://parivest.com/',
     image: Parivest,
-    tags: ['NextJS', 'MUI', 'Contentful'],
+    tags: ['NextJS', 'MUI', 'Contentful', 'Redux Toolkit', 'TailwindCSS'],
   },
   {
     name: 'Greyfield apartments and hotel',

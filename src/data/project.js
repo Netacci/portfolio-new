@@ -7,6 +7,7 @@ import Ws from '../assets/projects/ws.png';
 import Real from '../assets/projects/real.png';
 import Parivest from '../assets/projects/parivest.png';
 import Greyfield from '../assets/projects/greyfield.png';
+import Web3 from '../assets/projects/web3.png';
 
 export const projects = [
   {
@@ -38,6 +39,18 @@ export const projects = [
     live: 'https://parivest.com/',
     image: Parivest,
     tags: ['NextJS', 'MUI', 'Contentful', 'Redux Toolkit', 'TailwindCSS'],
+  },
+  {
+    name: 'Web3 project',
+    description:
+      'I was curious about web3 and crypto so I did this project to dabble into that. This is a simple project that lets a user sign in using their solana wallet or metamask wallet.',
+
+    live: 'https://web3-task-two.vercel.app/',
+    github: 'https://github.com/Netacci/web3-task',
+    article:
+      'https://netacci.hashnode.dev/connect-metamask-wallet-to-a-react-app',
+    image: Web3,
+    tags: ['Nextjs', 'TailwindCSS', 'MetaMask', 'Solana', 'Vercel', 'web3'],
   },
   {
     name: 'Greyfield apartments and hotel',

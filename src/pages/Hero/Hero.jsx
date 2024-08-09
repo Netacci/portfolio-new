@@ -30,9 +30,9 @@ const Hero = () => {
               mb: '0',
             }}
           >
-            Frontend Developer
+            Software Developer
           </Typography>
-          <Typography
+          {/* <Typography
             sx={{
               fontSize: '0.75rem',
               color: '#2b2d42',
@@ -41,7 +41,7 @@ const Hero = () => {
             }}
           >
             (Backend development in the works, technical writer by night)
-          </Typography>
+          </Typography> */}
           <motion.p
             style={{
               color: '#2b2d42',
@@ -57,12 +57,10 @@ const Hero = () => {
             then advanced to ReactJS and NextJs, creating user-friendly
             solutions tailored to clients&apos; needs. I call myself the
             ultimate bug crusher because I enjoy troubleshooting and
-            problem-solving. Currently, I am on my path to becoming a fullstack
-            developer as I&apos;m learning Node.js(express) and React Native. I
-            have worked with diverse teams both on a large and small scale,
-            leading an engineering team and successfully launching a product. I
-            also enjoy technical writing as I like to document my processes for
-            future reference.
+            problem-solving. I have worked with diverse teams both on a large
+            and small scale, led engineering teams and successfully launched
+            fullstack products. I also enjoy technical writing as I like to
+            document my processes for future reference.
           </motion.p>
           <Typography
             sx={{ color: '#2b2d42', lineHeight: '24px', mt: '20px' }}

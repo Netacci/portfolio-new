@@ -30,6 +30,15 @@ export const projects = [
     //   'https://netacci.hashnode.dev/real-time-updates-with-websockets-in-react-and-express-js',
   },
   {
+    name: 'Real estate agency',
+    description:
+      'This project enables realtors to sign up and list properties, providing a seamless experience for users to browse all approved listings. It also features an admin dashboard where administrators can efficiently manage realtors and their uploaded properties. While the frontend is still a work in progress, the backend infrastructure is robust and ready to support a dynamic real estate marketplace. For this project, I used sendGrid to send OTP to realtors email when they sign up and I used morgan and winston for logging.',
+    github: 'https://github.com/Netacci/skenny-backend',
+    live: 'https://skenny.org',
+    image: Real,
+    tags: ['ExpressJS', 'ReactJS', 'Redux', 'MongoDB', 'NodeJS', 'SendGrid'],
+  },
+  {
     name: 'P2P',
     description:
       'This project enables users to send and receive money, marking a significant step in my backend development journey. I used WebSocket technology to provide real-time updates to users. This approach was not only more efficient than traditional polling but also incredibly exciting to implement. I also wrote an article on the websocket implementation and why it was used instead of polling. The frontend is work in progress',
@@ -39,15 +48,6 @@ export const projects = [
     tags: ['ExpressJS', 'ReactJS', 'Redux', 'WebSocket'],
     article:
       'https://netacci.hashnode.dev/real-time-updates-with-websockets-in-react-and-express-js',
-  },
-  {
-    name: 'Real estate agency',
-    description:
-      'This project enables realtors to sign up and list properties, providing a seamless experience for users to browse all approved listings. It also features an admin dashboard where administrators can efficiently manage realtors and their uploaded properties. While the frontend is still a work in progress, the backend infrastructure is robust and ready to support a dynamic real estate marketplace. For this project, I used sendGrid to send OTP to realtors email when they sign up and I used morgan and winston for logging.',
-    github: 'https://github.com/Netacci/skenny-backend',
-    live: 'https://www.postman.com/red-station-829900/workspace/public/folder/18521077-b0dfa972-b981-43e1-b539-e76174dbfe12?action=share&creator=18521077&ctx=documentation&active-environment=18521077-749b7b31-a059-4a38-bf0e-d6f0ae0345c8',
-    image: Real,
-    tags: ['ExpressJS', 'ReactJS', 'Redux', 'MongoDB', 'NodeJS', 'SendGrid'],
   },
 
   {

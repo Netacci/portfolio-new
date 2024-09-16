@@ -18,7 +18,14 @@ export const projects = [
     github: 'https://github.com/Netacci/expenseTracker',
     live: 'https://expense-tracker-netaccis-projects.vercel.app',
     image: Bd,
-    tags: ['ExpressJS', 'ReactJS', 'Redux', 'Google oauth2', 'SendGrid'],
+    tags: [
+      'ExpressJS',
+      'ReactJS',
+      'Redux',
+      'Google oauth2',
+      'SendGrid',
+      'Shadcn',
+    ],
     // article:
     //   'https://netacci.hashnode.dev/real-time-updates-with-websockets-in-react-and-express-js',
   },

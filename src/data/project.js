@@ -8,8 +8,20 @@ import Real from '../assets/projects/real.png';
 import Parivest from '../assets/projects/parivest.png';
 import Greyfield from '../assets/projects/greyfield.png';
 import Web3 from '../assets/projects/web3.png';
+import Bd from '../assets/projects/bd.png';
 
 export const projects = [
+  {
+    name: 'Expense Tracker',
+    description:
+      'This full-stack web application enables users to manage and track their expenses effortlessly. A key feature is the integration of Google OAuth for quick and secure authentication, implemented using Passport.js on the backend. This allows users to sign in seamlessly, ensuring a smooth user experience.',
+    github: 'https://github.com/Netacci/expenseTracker',
+    live: 'https://expense-tracker-netaccis-projects.vercel.app',
+    image: Bd,
+    tags: ['ExpressJS', 'ReactJS', 'Redux', 'Google oauth2', 'SendGrid'],
+    // article:
+    //   'https://netacci.hashnode.dev/real-time-updates-with-websockets-in-react-and-express-js',
+  },
   {
     name: 'P2P',
     description:
@@ -28,7 +40,7 @@ export const projects = [
     github: 'https://github.com/Netacci/skenny-backend',
     live: 'https://www.postman.com/red-station-829900/workspace/public/folder/18521077-b0dfa972-b981-43e1-b539-e76174dbfe12?action=share&creator=18521077&ctx=documentation&active-environment=18521077-749b7b31-a059-4a38-bf0e-d6f0ae0345c8',
     image: Real,
-    tags: ['ExpressJS', 'ReactJS', 'Redux', 'MongoDB', 'NodeJS'],
+    tags: ['ExpressJS', 'ReactJS', 'Redux', 'MongoDB', 'NodeJS', 'SendGrid'],
   },
 
   {

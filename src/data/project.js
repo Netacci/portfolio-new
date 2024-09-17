@@ -23,7 +23,7 @@ export const projects = [
       'ReactJS',
       'Redux',
       'Google oauth2',
-      'SendGrid',
+      'Resend',
       'Shadcn',
     ],
     // article:

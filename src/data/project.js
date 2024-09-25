@@ -1,14 +1,17 @@
-import Campaign from '../assets/projects/campaign.png';
+// import Campaign from '../assets/projects/campaign.png';
 import Charity from '../assets/projects/charity.png';
 import Cosy from '../assets/projects/cosy.png';
 import Butter from '../assets/projects/butter-screenshot.png';
-import Memory from '../assets/projects/memory.png';
+// import Memory from '../assets/projects/memory.png';
 import Ws from '../assets/projects/ws.png';
-import Real from '../assets/projects/real.png';
+import Real from '../assets/projects/skenny.png';
 import Parivest from '../assets/projects/parivest.png';
 import Greyfield from '../assets/projects/greyfield.png';
 import Web3 from '../assets/projects/web3.png';
 import Bd from '../assets/projects/bd.png';
+import Prestay from '../assets/projects/prestay.png';
+import Adblabla from '../assets/projects/adblabla.png';
+import Kandy from '../assets/projects/kandy.png';
 
 export const projects = [
   {
@@ -37,6 +40,33 @@ export const projects = [
     live: 'https://skenny.org',
     image: Real,
     tags: ['ExpressJS', 'ReactJS', 'Redux', 'MongoDB', 'NodeJS', 'SendGrid'],
+  },
+  {
+    name: 'PreStayCheck',
+    description:
+      'A modern, AI-powered solution for Airbnb and property hosts to protect their assets. This landing page showcases PreStayCheck, a tool designed to help hosts track and manage property items, preventing theft by guests.',
+    live: 'http://prestaycheck.vercel.app',
+
+    image: Prestay,
+    tags: ['ReactJS', 'TailwindCSS'],
+  },
+  {
+    name: 'Adblabla',
+    description:
+      "The official website for Adblabla Technologies, a parent company focused on AI-driven startups. This sleek site highlights the company's innovative ventures in the AI space.",
+    live: 'http://adblabla.vercel.app',
+
+    image: Adblabla,
+    tags: ['ReactJS', 'TailwindCSS', 'Shadcn'],
+  },
+  {
+    name: 'Kandy Montessori Schools',
+    description:
+      "The official website for Kandy Montessori Group of Schools, offering a seamless online experience for parents and visitors to learn more about the school's programs and offerings.",
+    live: 'http://kandymontschool.com',
+
+    image: Kandy,
+    tags: ['ReactJS', 'TailwindCSS'],
   },
   {
     name: 'P2P',
@@ -80,15 +110,15 @@ export const projects = [
     image: Greyfield,
     tags: ['Wordpress', 'CMS'],
   },
-  {
-    name: 'Campaign page',
-    description:
-      'Webpage was used for a marketing campaign to promote a new product for the company',
-    github: 'https://github.com/Netacci/After-countdown/settings',
-    live: 'https://new-aftercountdown.netlify.app/',
-    image: Campaign,
-    tags: ['Html', 'css', 'javascript', 'bootstrap'],
-  },
+  // {
+  //   name: 'Campaign page',
+  //   description:
+  //     'Webpage was used for a marketing campaign to promote a new product for the company',
+  //   github: 'https://github.com/Netacci/After-countdown/settings',
+  //   live: 'https://new-aftercountdown.netlify.app/',
+  //   image: Campaign,
+  //   tags: ['Html', 'css', 'javascript', 'bootstrap'],
+  // },
   {
     name: 'Charity themed site',
     description:
@@ -111,18 +141,18 @@ export const projects = [
     description:
       'This mini e-commerce website was developed to highlight the advantages of using a Content Management System (CMS). The project served as the basis for an article I wrote, which was published by ButterCMS. This website demonstrates my ability to create functional e-commerce solutions and effectively communicate the benefits of CMS integration through technical writing.',
     github: 'https://github.com/Netacci/buttercms-ecommerce',
-    live: 'https://buttercms-ecommerce.vercel.app',
+
     image: Butter,
     tags: ['React', 'ButterCMS', 'Redux'],
     article: 'https://buttercms.com/blog/dynamic-react-ecommerce/',
   },
-  {
-    name: 'Netbox',
-    description:
-      'A mini game developed to learn javascript. One of my first projects',
-    github: 'https://github.com/Netacci/memorygame',
-    live: 'https://memory-game-sca.netlify.app/',
-    image: Memory,
-    tags: ['Javascript', 'CSS', 'HTML'],
-  },
+  // {
+  //   name: 'Netbox',
+  //   description:
+  //     'A mini game developed to learn javascript. One of my first projects',
+  //   github: 'https://github.com/Netacci/memorygame',
+  //   live: 'https://memory-game-sca.netlify.app/',
+  //   image: Memory,
+  //   tags: ['Javascript', 'CSS', 'HTML'],
+  // },
 ];

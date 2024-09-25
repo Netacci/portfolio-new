@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { projects } from '../../data/project';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { motion } from 'framer-motion';
@@ -37,6 +37,28 @@ const Projects = () => {
             <ProjectCard project={project} key={project.name} />
           ))}
         </motion.div>
+        <Box sx={{ textAlign: 'center', my: '30px' }}>
+          <Button
+            onClick={() => window.open('https://github.com/Netacci/', '_blank')}
+            sx={{
+              background: '#D90429',
+              color: '#ffffff',
+              borderRadius: '8px',
+              fontSize: '0.8rem',
+              width: '150px',
+
+              '&:hover': {
+                transform: 'scale(0.98)',
+                filter: 'opacity(0.7)',
+                WebkitFilter: 'opacity(0.7)',
+                backgroundColor: '#D90429',
+                color: '#ffffff',
+              },
+            }}
+          >
+            View All
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

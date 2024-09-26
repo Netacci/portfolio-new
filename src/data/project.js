@@ -1,17 +1,17 @@
 // import Campaign from '../assets/projects/campaign.png';
 import Charity from '../assets/projects/charity.png';
 import Cosy from '../assets/projects/cosy.png';
-import Butter from '../assets/projects/butter-screenshot.png';
+import Butter from '../assets/projects/butter-screenshot.jpg';
 // import Memory from '../assets/projects/memory.png';
 import Ws from '../assets/projects/ws.png';
-import Real from '../assets/projects/skenny.png';
-import Parivest from '../assets/projects/parivest.png';
-import Greyfield from '../assets/projects/greyfield.png';
+import Real from '../assets/projects/skenny.jpg';
+import Parivest from '../assets/projects/parivest.jpg';
+import Greyfield from '../assets/projects/greyfield.jpg';
 import Web3 from '../assets/projects/web3.png';
 import Bd from '../assets/projects/bd.png';
 import Prestay from '../assets/projects/prestay.png';
-import Adblabla from '../assets/projects/adblabla.png';
-import Kandy from '../assets/projects/kandy.png';
+import Adblabla from '../assets/projects/adblabla.jpg';
+import Kandy from '../assets/projects/kandy.jpg';
 
 export const projects = [
   {

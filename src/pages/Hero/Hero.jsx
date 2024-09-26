@@ -53,14 +53,16 @@ const Hero = () => {
             paragraph
             sx={{ mt: 4, mb: 6, fontSize: { lg: '1.2rem', xs: '1rem' } }}
           >
-            I started my software development career learning JavaScript and
-            then advanced to ReactJS and NextJs, creating user-friendly
-            solutions tailored to clients&apos; needs. I call myself the
-            ultimate bug crusher because I enjoy troubleshooting and
-            problem-solving. I have worked with diverse teams both on a large
-            and small scale, led engineering teams and successfully launched
-            fullstack products. I also enjoy technical writing as I like to
-            document my processes for future reference.
+            I started my software development career learning JavaScript,
+            progressing into ReactJS and Next.js, creating user-friendly
+            solutions tailored to clients&apos; needs. Along the way, I expanded
+            my skills by diving into backend development with Express.js, and
+            more recently, mobile app development with React Native. I call
+            myself the ultimate bug crusher because I enjoy troubleshooting and
+            problem-solving. I&apos;ve worked with diverse teams on both large
+            and small scales, led engineering teams, and successfully launched
+            fullstack products. I also enjoy technical writing, documenting my
+            processes for future reference.
           </Typography>
         </motion.div>
 

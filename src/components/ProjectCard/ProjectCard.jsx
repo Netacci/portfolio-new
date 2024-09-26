@@ -1,85 +1,137 @@
 /* eslint-disable react/prop-types */
-import { Box, Button, Chip, Typography } from '@mui/material';
+
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Chip,
+  Button,
+  Box,
+  CardActionArea,
+} from '@mui/material';
 import { motion } from 'framer-motion';
+import { GitHub, Launch, Article } from '@mui/icons-material';
 
 const ProjectCard = ({ project }) => {
-  const handleClick = () => {
-    if (project.github) {
-      window.open(project.github, '_blank');
-    } else return;
+  const handleClick = (url, event) => {
+    event.stopPropagation();
+    if (url) {
+      window.open(url, '_blank');
+    }
   };
-  return (
-    <Box
-      sx={{ cursor: 'pointer', width: { md: '500px', xs: '100%' }, mt: '10px' }}
-      onClick={() => window.open(project.live, '_blank')}
-    >
-      <motion.img
-        style={{ width: '100%' }}
-        src={project.image}
-        alt={project.name}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        whileInView={{ opacity: 1 }}
-        whileHover={{ scale: 1.1 }}
-      />
-      <Typography
-        sx={{ color: '#2b2d42', fontSize: '1.5rem', fontWeight: '900' }}
-      >
-        {project.name}
-      </Typography>
-      <Typography>{project.description}</Typography>
-      <Box sx={{ display: 'flex', gap: 1, my: '10px', flexWrap: 'wrap' }}>
-        {project.tags.map((tag) => (
-          <Chip label={tag} key={tag} />
-        ))}
-      </Box>
 
+  return (
+    <Card
+      component={motion.div}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      sx={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+        borderRadius: 2,
+        boxShadow: 3,
+        '&:hover': {
+          boxShadow: 6,
+        },
+      }}
+    >
+      <CardActionArea
+        onClick={(e) => handleClick(project.live, e)}
+        sx={{
+          flexGrow: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'stretch',
+        }}
+      >
+        <CardMedia
+          component='img'
+          height='200'
+          image={project.image}
+          alt={project.name}
+          sx={{
+            objectFit: 'cover',
+            transition: '0.3s',
+            '&:hover': {
+              transform: 'scale(1.05)',
+            },
+          }}
+        />
+        <CardContent
+          sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}
+        >
+          <Typography
+            gutterBottom
+            variant='h5'
+            component='div'
+            fontWeight='bold'
+          >
+            {project.name}
+          </Typography>
+          <Typography
+            variant='body2'
+            color='text.secondary'
+            sx={{ mb: 2, flexGrow: 1 }}
+          >
+            {project.description}
+          </Typography>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mb: 2 }}>
+            {project.tags.map((tag) => (
+              <Chip
+                key={tag}
+                label={tag}
+                size='small'
+                sx={{
+                  backgroundColor: 'primary.light',
+                  color: 'primary.contrastText',
+                  fontWeight: 'medium',
+                }}
+              />
+            ))}
+          </Box>
+        </CardContent>
+      </CardActionArea>
       <Box
         sx={{
           display: 'flex',
-          gap: 1,
-          my: '10px',
-          flexDirection: { xs: 'column', md: 'row' },
+          justifyContent: 'space-around',
+          p: 1,
+          backgroundColor: 'background.paper',
         }}
       >
-        <Button
-          sx={{
-            background: '#fff0f2',
-            color: '#2b2d42',
-            '&:hover': { background: '#fff0f2' },
-          }}
-          onClick={handleClick}
-        >
-          {project?.github ? 'View repository' : 'Private Repository'}
-        </Button>
-        {project.live && (
+        {project.github && (
           <Button
-            sx={{
-              background: '#fff0f2',
-              color: '#2b2d42',
-              '&:hover': { background: '#fff0f2' },
-            }}
-            onClick={() => window.open(project.live, '_blank')}
+            startIcon={<GitHub />}
+            onClick={(e) => handleClick(project.github, e)}
+            sx={{ minWidth: 'auto' }}
           >
-            View live
+            Code
           </Button>
         )}
-
-        {project?.article && (
+        {project.live && (
           <Button
-            sx={{
-              background: '#fff0f2',
-              color: '#2b2d42',
-              '&:hover': { background: '#fff0f2' },
-            }}
-            onClick={() => window.open(project.article, '_blank')}
+            startIcon={<Launch />}
+            onClick={(e) => handleClick(project.live, e)}
+            sx={{ minWidth: 'auto' }}
           >
-            Read Article
+            Demo
+          </Button>
+        )}
+        {project.article && (
+          <Button
+            startIcon={<Article />}
+            onClick={(e) => handleClick(project.article, e)}
+            sx={{ minWidth: 'auto' }}
+          >
+            Article
           </Button>
         )}
       </Box>
-    </Box>
+    </Card>
   );
 };
 

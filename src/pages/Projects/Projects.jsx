@@ -1,65 +1,76 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Typography, Button, Grid, Container } from '@mui/material';
 import { projects } from '../../data/project';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
-    <Box sx={{ px: { lg: 5, xs: 2 }, mt: '30px' }} id='projects'>
-      <Box>
-        <Typography sx={{ textAlign: 'center', color: '#D90429' }}>
-          Projects
-        </Typography>
-        <Typography
-          sx={{
-            textAlign: 'center',
-            color: '#8D99AE',
-            fontSize: '2rem',
-            fontWeight: '900',
-            mb: '20px',
-          }}
-        >
-          Some of the stuff I&apos;ve built
-        </Typography>
+    <Box
+      component='section'
+      sx={{ py: 8, backgroundColor: 'background.default' }}
+      id='projects'
+    >
+      <Container maxWidth='lg'>
         <motion.div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: 5,
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-          }}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
-          {projects.map((project) => (
-            <ProjectCard project={project} key={project.name} />
-          ))}
+          <Typography
+            variant='h6'
+            align='center'
+            color='primary'
+            gutterBottom
+            fontWeight='medium'
+          >
+            MY WORK
+          </Typography>
+          <Typography
+            variant='h3'
+            align='center'
+            color='text.primary'
+            gutterBottom
+            fontWeight='bold'
+            sx={{ mb: 6 }}
+          >
+            Recent Projects
+          </Typography>
         </motion.div>
-        <Box sx={{ textAlign: 'center', my: '30px' }}>
+        <Grid container spacing={4}>
+          {projects.map((project, index) => (
+            <Grid item xs={12} sm={6} md={4} key={project.name}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
+        <Box sx={{ textAlign: 'center', mt: 8 }}>
           <Button
+            variant='contained'
+            color='primary'
+            size='large'
             onClick={() => window.open('https://github.com/Netacci/', '_blank')}
             sx={{
-              background: '#D90429',
-              color: '#ffffff',
-              borderRadius: '8px',
-              fontSize: '0.8rem',
-              width: '150px',
-
+              borderRadius: '28px',
+              padding: '12px 36px',
+              fontWeight: 'bold',
+              textTransform: 'none',
+              fontSize: '1.1rem',
               '&:hover': {
-                transform: 'scale(0.98)',
-                filter: 'opacity(0.7)',
-                WebkitFilter: 'opacity(0.7)',
-                backgroundColor: '#D90429',
-                color: '#ffffff',
+                transform: 'translateY(-2px)',
+                boxShadow: (theme) => theme.shadows[4],
               },
             }}
           >
-            View All
+            View All Projects
           </Button>
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 };

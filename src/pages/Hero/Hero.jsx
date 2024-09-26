@@ -99,7 +99,7 @@ const Hero = () => {
             size='large'
             onClick={() =>
               window.open(
-                'https://drive.google.com/file/d/10KN7khb54xcHAx0_DUQJmnwfKSDkWI5p/view?usp=sharing',
+                'https://drive.google.com/file/d/1bxTTaKGqwqqaWWHeW2gSrWoHxtvh_by6/view?usp=sharing',
                 '_blank'
               )
             }

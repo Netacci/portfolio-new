@@ -15,9 +15,9 @@ import Kandy from '../assets/projects/kandy.png';
 
 export const projects = [
   {
-    name: 'Expense Tracker',
+    name: 'AI Powered Expense Tracker',
     description:
-      'This full-stack web application enables users to manage and track their expenses effortlessly. A key feature is the integration of Google OAuth for quick and secure authentication, implemented using Passport.js on the backend. This allows users to sign in seamlessly, ensuring a smooth user experience.',
+      'This full-stack web application enables users to manage and track their expenses effortlessly. A key feature is the integration of Google OAuth for quick and secure authentication, implemented using Passport.js on the backend. This allows users to sign in seamlessly, ensuring a smooth user experience. Users can also download AI generated report based on their spending habits',
     github: 'https://github.com/Netacci/expenseTracker',
     live: 'https://expense-tracker-netaccis-projects.vercel.app',
     image: Bd,
@@ -28,6 +28,8 @@ export const projects = [
       'Google oauth2',
       'Resend',
       'Shadcn',
+      'MongoDB',
+      'groq',
     ],
     // article:
     //   'https://netacci.hashnode.dev/real-time-updates-with-websockets-in-react-and-express-js',

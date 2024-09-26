@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography, Button, Container, useTheme } from '@mui/material';
 import { PhoneInTalk, Email } from '@mui/icons-material';
 import { motion } from 'framer-motion';
@@ -28,7 +27,7 @@ const Banner = () => {
             gutterBottom
             sx={{ fontWeight: 600 }}
           >
-            I'm available for freelance and full-time roles
+            I&apos;m available for freelance and full-time roles
           </Typography>
           <Typography
             variant='h3'
@@ -37,7 +36,7 @@ const Banner = () => {
             gutterBottom
             sx={{ fontWeight: 900, my: 2 }}
           >
-            Let's talk...
+            Let&apos;s talk...
           </Typography>
           <Box
             sx={{

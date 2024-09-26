@@ -1,60 +1,87 @@
-import { Email, PhoneInTalk } from '@mui/icons-material';
-import { Box, Typography } from '@mui/material';
-
+import React from 'react';
+import { Box, Typography, Button, Container, useTheme } from '@mui/material';
+import { PhoneInTalk, Email } from '@mui/icons-material';
+import { motion } from 'framer-motion';
 const Banner = () => {
+  const theme = useTheme();
   return (
-    <Box sx={{ background: '#edf2f4' }} id='contact'>
-      <Box sx={{ px: { lg: 5, xs: 2 }, textAlign: 'center', py: 5 }}>
-        <Typography
-          sx={{ color: '#d90429', fontSize: '1rem', fontWeight: '600' }}
+    <Box
+      component='section'
+      sx={{
+        background: theme.palette.background.paper,
+        py: 8,
+        borderTop: `1px solid ${theme.palette.divider}`,
+        borderBottom: `1px solid ${theme.palette.divider}`,
+      }}
+      id='contact'
+    >
+      <Container maxWidth='md'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          I&apos;m available for freelance and full time roles
-        </Typography>
-        <Typography
-          sx={{
-            color: '#8d99ae',
-            fontSize: '2.5rem',
-            fontWeight: '900',
-            mt: '10px',
-          }}
-        >
-          Let&apos;s talk ..
-        </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: { lg: 'row', xs: 'column' },
-            gap: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-
-            mt: '10px',
-            mx: 'auto',
-          }}
-        >
-          <Box sx={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
-            {' '}
-            <PhoneInTalk sx={{ color: '#d90429' }} />{' '}
-            <Typography
-              sx={{ color: '#2b2d42', fontWeight: '900' }}
-              component={'a'}
+          <Typography
+            variant='h6'
+            align='center'
+            color='primary'
+            gutterBottom
+            sx={{ fontWeight: 600 }}
+          >
+            I'm available for freelance and full-time roles
+          </Typography>
+          <Typography
+            variant='h3'
+            align='center'
+            color='text.primary'
+            gutterBottom
+            sx={{ fontWeight: 900, my: 2 }}
+          >
+            Let's talk...
+          </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 3,
+              mt: 4,
+            }}
+          >
+            <Button
+              variant='outlined'
+              color='primary'
+              startIcon={<PhoneInTalk />}
               href='tel:+2347018670919'
+              sx={{
+                borderRadius: 2,
+                px: 3,
+                py: 1,
+                fontWeight: 'bold',
+                '&:hover': { transform: 'translateY(-2px)' },
+              }}
             >
               +234 701 867 0919
-            </Typography>
-          </Box>
-          <Box sx={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
-            <Email sx={{ color: '#d90429' }} />
-            <Typography
-              sx={{ color: '#2b2d42', fontWeight: '900' }}
-              component={'a'}
+            </Button>
+            <Button
+              variant='outlined'
+              color='primary'
+              startIcon={<Email />}
               href='mailto:chinetaadinnu@gmail.com'
+              sx={{
+                borderRadius: 2,
+                px: 3,
+                py: 1,
+                fontWeight: 'bold',
+                '&:hover': { transform: 'translateY(-2px)' },
+              }}
             >
               chinetaadinnu@gmail.com
-            </Typography>
+            </Button>
           </Box>
-        </Box>
-      </Box>
+        </motion.div>
+      </Container>
     </Box>
   );
 };

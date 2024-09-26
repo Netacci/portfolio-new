@@ -1,8 +1,27 @@
-import { Box, Typography, Button, Container, useTheme } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Button,
+  Container,
+  useTheme,
+  useMediaQuery,
+} from '@mui/material';
 import { motion } from 'framer-motion';
+import { Code } from '@mui/icons-material';
 
 const Hero = () => {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const codeSnippet = `
+  function contact() {
+    const email = "chinetaadinnu@gmail.com";
+    const phone = "+234 701 867 0919";
+    return { email, phone };
+  }
+  
+  // Let's connect!
+  const { email, phone } = contact();
+    `.trim();
 
   return (
     <Box
@@ -12,6 +31,7 @@ const Hero = () => {
         display: 'flex',
         alignItems: 'center',
         py: 8,
+        position: 'relative',
       }}
     >
       <Container maxWidth='md'>
@@ -117,6 +137,79 @@ const Hero = () => {
           </Button>
         </Box>
       </Container>
+
+      {!isMobile && (
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: 0,
+            transform: 'translateY(-50%)',
+            width: '100%',
+            height: '100%',
+            opacity: 0.1,
+            zIndex: 0,
+            overflow: 'hidden',
+          }}
+        >
+          <motion.pre
+            initial={{ x: '-100%' }}
+            animate={{ x: '100%' }}
+            transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+            style={{
+              fontFamily: 'monospace',
+              fontSize: '14px',
+              whiteSpace: 'pre-wrap',
+              wordBreak: 'break-all',
+            }}
+          >
+            {codeSnippet.repeat(20)}
+          </motion.pre>
+        </Box>
+      )}
+
+      {!isMobile && (
+        <motion.div
+          style={{
+            position: 'absolute',
+            bottom: '26%',
+            left: '25%',
+            color: theme.palette.secondary.light,
+            opacity: 0.4,
+          }}
+          animate={{
+            y: [0, -15, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        >
+          <Code style={{ fontSize: 60 }} />
+        </motion.div>
+      )}
+      {!isMobile && (
+        <motion.div
+          style={{
+            position: 'absolute',
+            top: '40%',
+            right: '30%',
+            color: theme.palette.secondary.light,
+            opacity: 0.4,
+          }}
+          animate={{
+            y: [0, 15, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        >
+          <Code style={{ fontSize: 40 }} />
+        </motion.div>
+      )}
     </Box>
   );
 };

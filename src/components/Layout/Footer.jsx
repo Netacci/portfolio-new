@@ -1,38 +1,73 @@
-import { GitHub, LinkedIn, WhatsApp } from '@mui/icons-material';
-import { Box, Typography } from '@mui/material';
+import React from 'react';
+import {
+  Box,
+  Typography,
+  IconButton,
+  Container,
+  useTheme,
+} from '@mui/material';
+import { LinkedIn, GitHub, WhatsApp } from '@mui/icons-material';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
+  const theme = useTheme();
+
+  const socialLinks = [
+    { icon: LinkedIn, url: 'https://www.linkedin.com/in/chineta-adinnu/' },
+    { icon: GitHub, url: 'https://github.com/Netacci' },
+    { icon: WhatsApp, url: 'https://wa.link/ymt1x8' },
+  ];
+
   return (
-    <Box sx={{ background: '#2B2D42' }}>
-      <Box sx={{ px: { lg: 5, xs: 2 }, py: '30px', textAlign: 'center' }}>
-        <Typography sx={{ color: '#ffffff' }}>Follow me on Socials</Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            gap: '10px',
-            justifyContent: 'center',
-            mt: '10px',
-          }}
+    <Box
+      component='footer'
+      sx={{
+        background: theme.palette.primary.main,
+        color: theme.palette.primary.contrastText,
+        py: 4,
+      }}
+    >
+      <Container maxWidth='lg'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <LinkedIn
-            sx={{ color: '#ffffff', cursor: 'pointer' }}
-            onClick={() =>
-              window.open(
-                'https://www.linkedin.com/in/chineta-adinnu/',
-                '_blank'
-              )
-            }
-          />
-          <GitHub
-            sx={{ color: '#ffffff', cursor: 'pointer' }}
-            onClick={() => window.open('https://github.com/Netacci', '_blank')}
-          />
-          <WhatsApp
-            sx={{ color: '#ffffff', cursor: 'pointer' }}
-            onClick={() => window.open('https://wa.link/ymt1x8', '_blank')}
-          />
-        </Box>
-      </Box>
+          <Typography variant='h6' align='center' gutterBottom>
+            Follow me on Socials
+          </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+            {socialLinks.map((link, index) => (
+              <IconButton
+                key={index}
+                color='inherit'
+                component='a'
+                href={link.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                sx={{
+                  mx: 1,
+                  transition: 'transform 0.2s',
+                  '&:hover': {
+                    transform: 'scale(1.2)',
+                    color: theme.palette.secondary.main,
+                  },
+                }}
+              >
+                <link.icon />
+              </IconButton>
+            ))}
+          </Box>
+          <Typography
+            variant='body2'
+            color='inherit'
+            align='center'
+            sx={{ mt: 2 }}
+          >
+            © {new Date().getFullYear()} Netacci. All rights reserved.
+          </Typography>
+        </motion.div>
+      </Container>
     </Box>
   );
 };

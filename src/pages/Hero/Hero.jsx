@@ -105,6 +105,8 @@ const Hero = () => {
               borderRadius: '28px',
               padding: '10px 30px',
               fontWeight: 'bold',
+              zIndex: 9999,
+              cursor: 'pointer',
               '&:hover': {
                 transform: 'translateY(-2px)',
                 boxShadow: theme.shadows[4],
@@ -127,6 +129,8 @@ const Hero = () => {
               borderRadius: '28px',
               padding: '10px 30px',
               fontWeight: 'bold',
+              zIndex: 9999,
+              cursor: 'pointer',
               '&:hover': {
                 transform: 'translateY(-2px)',
                 boxShadow: theme.shadows[4],

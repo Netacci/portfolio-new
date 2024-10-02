@@ -37,7 +37,7 @@ export const projects = [
   {
     name: 'Real estate agency',
     description:
-      'This project enables realtors to sign up and list properties, providing a seamless experience for users to browse all approved listings. It also features an admin dashboard where administrators can efficiently manage realtors and their uploaded properties. While the frontend is still a work in progress, the backend infrastructure is robust and ready to support a dynamic real estate marketplace. For this project, I used sendGrid to send OTP to realtors email when they sign up and I used morgan and winston for logging.',
+      'This project enables realtors to sign up and list properties, providing a seamless experience for users to browse all approved listings. It also features an admin dashboard where administrators can efficiently manage realtors and their uploaded properties.  For this project, I used sendGrid to send OTP to realtors email when they sign up and I used morgan and winston for logging.',
     github: 'https://github.com/Netacci/skenny-backend',
     live: 'https://skenny.org',
     image: Real,

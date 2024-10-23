@@ -12,6 +12,7 @@ import Bd from '../assets/projects/bd.png';
 import Prestay from '../assets/projects/prestay.png';
 import Adblabla from '../assets/projects/adblabla.jpg';
 import Kandy from '../assets/projects/kandy.jpg';
+import RecipeFinderImage from '../assets/projects/recipefinder.png';
 
 export const projects = [
   {
@@ -31,9 +32,27 @@ export const projects = [
       'MongoDB',
       'groq',
     ],
-    // article:
-    //   'https://netacci.hashnode.dev/real-time-updates-with-websockets-in-react-and-express-js',
   },
+  {
+    name: 'AI-Powered Recipe Finder',
+    description:
+      'A full-stack web application that allows users to search for recipes by dish name and country. Leveraging AI, the app generates detailed recipes if they are not already in the database. It also integrates with the Pexels API to fetch high-quality food images and uses MongoDB for storing recipe data. React Query is used for efficient data fetching and state management.',
+    github: 'https://github.com/Netacci/Recipefinder',
+    live: 'https://recipefinder-netaccis-projects.vercel.app',
+    image: RecipeFinderImage,
+    tags: [
+      'ExpressJS',
+      'ReactJS',
+      'Redux',
+      'MongoDB',
+      'Pexels API',
+      'React Query',
+      'Grok AI',
+      'TypeScript',
+      'Shadcn',
+    ],
+  },
+
   {
     name: 'Real estate agency',
     description:

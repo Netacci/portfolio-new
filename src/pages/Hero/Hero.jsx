@@ -121,7 +121,7 @@ const Hero = () => {
             size='large'
             onClick={() =>
               window.open(
-                'https://drive.google.com/file/d/1bxTTaKGqwqqaWWHeW2gSrWoHxtvh_by6/view?usp=sharing',
+                'https://drive.google.com/file/d/1yqcr3g1U8TPBduoHXSwpBcfVDgdQQpua/view?usp=sharing',
                 '_blank'
               )
             }

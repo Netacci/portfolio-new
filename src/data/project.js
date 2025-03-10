@@ -66,7 +66,7 @@ export const projects = [
     name: 'PreStayCheck',
     description:
       'A modern, AI-powered solution for Airbnb and property hosts to protect their assets. This landing page showcases PreStayCheck, a tool designed to help hosts track and manage property items, preventing theft by guests.',
-    live: 'http://prestaycheck.vercel.app',
+    live: 'https://prestaycheck.vercel.app',
 
     image: Prestay,
     tags: ['ReactJS', 'TailwindCSS'],
@@ -75,7 +75,7 @@ export const projects = [
     name: 'Adblabla',
     description:
       "The official website for Adblabla Technologies, a parent company focused on AI-driven startups. This sleek site highlights the company's innovative ventures in the AI space.",
-    live: 'http://adblabla.vercel.app',
+    live: 'https://adblabla.vercel.app',
 
     image: Adblabla,
     tags: ['ReactJS', 'TailwindCSS', 'Shadcn'],
@@ -84,7 +84,7 @@ export const projects = [
     name: 'Kandy Montessori Schools',
     description:
       "The official website for Kandy Montessori Group of Schools, offering a seamless online experience for parents and visitors to learn more about the school's programs and offerings.",
-    live: 'http://kandymontschool.com',
+    live: 'https://www.kandymontessorischools.com/',
 
     image: Kandy,
     tags: ['ReactJS', 'TailwindCSS'],

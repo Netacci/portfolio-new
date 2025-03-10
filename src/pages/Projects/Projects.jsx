@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <Box
       component='section'
-      sx={{ py: 8, backgroundColor: 'background.default' }}
+      sx={{ py: 8, backgroundColor: '#ADD8E6' }}
       id='projects'
     >
       <Container maxWidth='lg'>

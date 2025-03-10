@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        background: `linear-gradient(135deg, ${theme.palette.primary.light}, ${theme.palette.secondary.light})`,
+        background: `#ffffff`,
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -165,6 +165,7 @@ const Hero = () => {
               fontSize: '14px',
               whiteSpace: 'pre-wrap',
               wordBreak: 'break-all',
+              color:'#000000',
             }}
           >
             {codeSnippet.repeat(20)}

@@ -157,16 +157,16 @@ export const projects = [
     image: Cosy,
     tags: ['Html', 'CSS', 'Javascript', 'Bootstrap'],
   },
-  {
-    name: 'Mini eCommerce site',
-    description:
-      'This mini e-commerce website was developed to highlight the advantages of using a Content Management System (CMS). The project served as the basis for an article I wrote, which was published by ButterCMS. This website demonstrates my ability to create functional e-commerce solutions and effectively communicate the benefits of CMS integration through technical writing.',
-    github: 'https://github.com/Netacci/buttercms-ecommerce',
+  // {
+  //   name: 'Mini eCommerce site',
+  //   description:
+  //     'This mini e-commerce website was developed to highlight the advantages of using a Content Management System (CMS). The project served as the basis for an article I wrote, which was published by ButterCMS. This website demonstrates my ability to create functional e-commerce solutions and effectively communicate the benefits of CMS integration through technical writing.',
+  //   github: 'https://github.com/Netacci/buttercms-ecommerce',
 
-    image: Butter,
-    tags: ['React', 'ButterCMS', 'Redux'],
-    article: 'https://buttercms.com/blog/dynamic-react-ecommerce/',
-  },
+  //   image: Butter,
+  //   tags: ['React', 'ButterCMS', 'Redux'],
+  //   article: 'https://buttercms.com/blog/dynamic-react-ecommerce/',
+  // },
   // {
   //   name: 'Netbox',
   //   description:

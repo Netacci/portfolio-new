@@ -1,71 +1,58 @@
-import {
-  Box,
-  Typography,
-  IconButton,
-  Container,
-  useTheme,
-} from '@mui/material';
+import { Box, Typography, IconButton, Container } from '@mui/material';
 import { LinkedIn, GitHub, WhatsApp } from '@mui/icons-material';
-import { motion } from 'framer-motion';
+
+const socialLinks = [
+  { icon: LinkedIn, url: 'https://www.linkedin.com/in/chineta-adinnu/', label: 'LinkedIn' },
+  { icon: GitHub, url: 'https://github.com/Netacci', label: 'GitHub' },
+  { icon: WhatsApp, url: 'https://wa.link/ymt1x8', label: 'WhatsApp' },
+];
 
 const Footer = () => {
-  const theme = useTheme();
-
-  const socialLinks = [
-    { icon: LinkedIn, url: 'https://www.linkedin.com/in/chineta-adinnu/' },
-    { icon: GitHub, url: 'https://github.com/Netacci' },
-    { icon: WhatsApp, url: 'https://wa.link/ymt1x8' },
-  ];
-
   return (
     <Box
       component='footer'
       sx={{
-        background: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
+        backgroundColor: '#0c0c0c',
+        borderTop: '1px solid rgba(255,255,255,0.06)',
         py: 4,
       }}
     >
       <Container maxWidth='lg'>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', sm: 'row' },
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: 2,
+          }}
         >
-          <Typography variant='h6' align='center' gutterBottom>
-            Follow me on Socials
+          <Typography
+            sx={{ color: '#4b5563', fontSize: '0.85rem' }}
+          >
+            &copy; {new Date().getFullYear()} Chineta Adinnu. Built with React.
           </Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-            {socialLinks.map((link, index) => (
+
+          <Box sx={{ display: 'flex', gap: 0.5 }}>
+            {socialLinks.map((link) => (
               <IconButton
-                key={index}
-                color='inherit'
+                key={link.label}
                 component='a'
                 href={link.url}
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label={link.label}
                 sx={{
-                  mx: 1,
-                  transition: 'transform 0.2s',
-                  '&:hover': {
-                    transform: 'scale(1.2)',
-                    color: theme.palette.secondary.main,
-                  },
+                  color: '#4b5563',
+                  transition: 'color 0.2s ease',
+                  '&:hover': { color: '#f5f5f5', backgroundColor: 'rgba(255,255,255,0.06)' },
                 }}
               >
-                <link.icon />
+                <link.icon sx={{ fontSize: '1.2rem' }} />
               </IconButton>
             ))}
           </Box>
-          <Typography
-            variant='body2'
-            color='inherit'
-            align='center'
-            sx={{ mt: 2 }}
-          >
-            © {new Date().getFullYear()} Netacci. All rights reserved.
-          </Typography>
-        </motion.div>
+        </Box>
       </Container>
     </Box>
   );

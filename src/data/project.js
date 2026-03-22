@@ -10,9 +10,9 @@ export const featuredProjects = [
     company: 'Mozilla',
     companyColor: '#ff6611',
     problem:
-      'Firefox engineers could search performance data, but the tooling was limited — finding regressions tied to specific patches, authors, or bug numbers was slow and imprecise, creating friction in an already complex workflow.',
+      'The team wanted engineers to search for content related to patches (bug number, summary, author) directly within PerfCompare. The existing tooling made this slow and inconsistent across large datasets.',
     solution:
-      'Built the search and filtering functionality end-to-end. Improved accessibility across the tool and contributed to the Django + PostgreSQL backend to support new data queries.',
+      'Built the search feature end-to-end. Designed a PostgreSQL full-text search implementation using search vectors with a GIN index, enabling engineers to query across multiple fields simultaneously while keeping performance overhead low on large datasets. Also handled schema changes for backward compatibility with legacy records and updated the React frontend to surface the new search experience.',
     impact:
       'Used actively by Mozilla\'s performance engineering team to catch regressions before they reach millions of Firefox users.',
     tags: ['React', 'Django', 'PostgreSQL', 'TypeScript', 'Accessibility'],
@@ -27,11 +27,11 @@ export const featuredProjects = [
     company: 'RightNowMD · Florida',
     companyColor: '#0ea5e9',
     problem:
-      'A production telehealth platform needed both the operational admin system and the patient-facing flows for provider and clinic visits built from scratch — including a scheduling engine that could serve real-time bookings across 4 session types without double bookings or timezone drift.',
+      'A telehealth platform serving real patients needed an admin system and scheduling engine built from scratch. The core challenge: how do you manage real-time bookings across 4 different session types (telemedicine, nurse, provider, and clinic visits) without double bookings or timezone drift?',
     solution:
-      'Built fullstack (backend + frontend) for the entire admin dashboard — triage queue with AI-escalated cases, dispatch center with ETA tracking, KPI analytics via aggregation pipelines, staff management, and CSV exports localized to Florida (ET). Built the backend for provider and clinic visit flows. Engineered a scheduling system where admins define slots once across all 4 session types — slots atomically reserved on booking, freed on cancellation, and updated live via SSE so availability changes instantly with no polling.',
+      'Built fullstack (backend + frontend) for the entire admin dashboard: triage queue with AI-escalated cases, dispatch center with ETA tracking, KPI analytics via aggregation pipelines, staff management, and CSV exports localized to Florida (ET). Built the backend for provider and clinic visit flows. Engineered a scheduling system where admins define slots once across all 4 session types. Slots are atomically reserved on booking, freed on cancellation, and updated live via SSE so availability changes instantly with no polling.',
     impact:
-      'Production system serving real patients. Zero double bookings. Real-time slot updates without polling. Full operational visibility across triage, dispatch, staff, and revenue — all timezone-correct across a distributed system.',
+      'Production system serving real patients. Zero double bookings. Real-time slot updates without polling. Full operational visibility across triage, dispatch, staff, and revenue, all timezone-correct across a distributed system.',
     tags: ['Node.js', 'TypeScript', 'Next.js', 'MongoDB', 'Redis', 'SSE', 'Stripe', 'Express.js'],
     live: 'https://rightnowmd.healthcare/',
     cardColor: '#051525',
@@ -43,7 +43,7 @@ export const featuredProjects = [
     company: 'Parivest',
     companyColor: '#10b981',
     problem:
-      'An early-stage fintech needed to evolve from MVP to a market-fit product — shipping savings and referral features, reducing ops overhead, and converting more visitors into users.',
+      'An early-stage fintech needed to evolve from MVP to a market-fit product: shipping savings and referral features, reducing ops overhead, and converting more visitors into users.',
     solution:
       'Owned engineering strategy end-to-end as Technical Lead. Launched savings and referral features, rebuilt the landing page in Next.js, built an admin dashboard that automated manual ops tasks, and led product research and competitor analysis that shaped roadmap decisions.',
     impact:
@@ -60,7 +60,7 @@ export const featuredProjects = [
     company: 'Personal Project',
     companyColor: '#6366f1',
     problem:
-      'Users needed more than a ledger — they wanted to understand their spending habits and get intelligent summaries without doing the analysis themselves.',
+      'Users needed more than a ledger. They wanted to understand their spending habits and get intelligent summaries without doing the analysis themselves.',
     solution:
       'Built a fullstack app with Google OAuth via Passport.js, expense logging, and AI-generated spending reports using Groq. Deployed end-to-end on Vercel.',
     impact:
@@ -80,7 +80,7 @@ export const featuredProjects = [
     problem:
       'Realtors needed a trusted platform to list verified properties, while admins needed full oversight over listings and agent accounts.',
     solution:
-      'Built the full platform — OTP verification via SendGrid, property listing flows, an admin dashboard for managing agents and listings, and structured logging with Winston + Morgan.',
+      'Built the full platform: OTP verification via SendGrid, property listing flows, an admin dashboard for managing agents and listings, and structured logging with Winston + Morgan.',
     impact:
       'Live at skenny.org. A production system serving real agents and property seekers with a full admin control layer.',
     tags: ['React', 'Express.js', 'MongoDB', 'Node.js', 'SendGrid', 'Redux'],
@@ -96,11 +96,11 @@ export const featuredProjects = [
     company: 'SupplyAI · USA',
     companyColor: '#8b5cf6',
     problem:
-      'B2B procurement is slow and opaque — buyers have no efficient way to find verified, capability-matched suppliers without manual sourcing. The platform needed to serve three completely different user types (public visitors, paying buyers, and internal admins) from a single coherent system.',
+      'B2B procurement is slow and opaque. Buyers have no efficient way to find verified, capability-matched suppliers without manual sourcing. The platform needed to serve three different user types (public visitors, paying buyers, and internal admins) from a single coherent system.',
     solution:
-      'Built 4 applications end-to-end: a public marketing site with a paywall/preview flow (unauthenticated users see a teaser of match results before paying), a buyer dashboard for procurement requests, AI match reports, subscriptions, and billing, an internal admin dashboard covering suppliers, plans, users, and transactions, and a backend with a two-phase AI matching engine — rule-based keyword scoring pre-payment, then ChatGPT API for semantic capability scoring and AI-generated "why they match" explanations post-payment. Stripe for subscriptions and one-time payments, Resend for transactional email, JWT auth with separate admin and customer roles.',
+      'Built 4 applications end-to-end: a public marketing site with a paywall/preview flow where unauthenticated users see a teaser of their match results before signing up, a buyer dashboard for procurement requests, AI match reports, subscriptions and billing, an internal admin dashboard covering suppliers, plans, users, and transactions, and a backend with a two-phase AI matching engine. Pre-payment uses rule-based keyword scoring; post-payment calls Groq (llama-3.3-70b) for semantic capability scoring with AI-generated match explanations. Stripe for payments, Resend for transactional email, JWT auth with separate admin and customer roles.',
     impact:
-      'In progress. Complete architecture for a production-ready B2B SaaS platform — 3 frontend apps, 1 API, AI matching, payments, and auth all working in concert.',
+      'In progress. Complete architecture for a production-ready B2B SaaS platform: 3 frontend apps, 1 API, AI matching, payments, and auth all working in concert.',
     tags: ['Next.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'Groq AI', 'Stripe', 'Tailwind CSS', 'JWT'],
     cardColor: '#0f0a1e',
     accentColor: '#8b5cf6',

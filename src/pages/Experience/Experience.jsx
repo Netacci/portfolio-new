@@ -18,18 +18,6 @@ const experiences = [
     ],
   },
   {
-    company: 'Mozilla',
-    role: 'Frontend Engineer',
-    period: '2024',
-    color: '#ff6611',
-    highlights: [
-      'Built search and filtering for PerfCompare — Mozilla\'s browser performance regression tool',
-      'Improved accessibility across the UI, making the tool usable for all engineers',
-      'Contributed across the stack: React frontend and Django + PostgreSQL backend',
-      'Worked in an open-source environment with async, distributed teams',
-    ],
-  },
-  {
     company: 'Turing',
     role: 'LLM Trainer',
     period: '2025',
@@ -42,6 +30,19 @@ const experiences = [
     ],
   },
   {
+    company: 'Mozilla',
+    role: 'Frontend Engineer',
+    period: '2024',
+    color: '#ff6611',
+    highlights: [
+      'Built search and filtering for PerfCompare — Mozilla\'s browser performance regression tool',
+      'Improved accessibility across the UI, making the tool usable for all engineers',
+      'Contributed across the stack: React frontend and Django + PostgreSQL backend',
+      'Worked in an open-source environment with async, distributed teams',
+    ],
+  },
+  
+  {
     company: 'Parivest',
     role: 'Technical Lead',
     period: '2022 – 2025',
@@ -51,6 +52,18 @@ const experiences = [
       'Launched savings and referral features driving a 35% increase in user engagement and 40% increase in retention',
       'Built an admin dashboard that cut manual operational tasks by 50%',
       'Rebuilt the landing page in Next.js, contributing to a 15% lift in conversion rates',
+    ],
+  },
+  {
+    company: 'Fullgap',
+    role: 'Frontend Developer',
+    period: '2022',
+    color: '#0891b2',
+    highlights: [
+      'Built user-focused web applications with ReactJS and Material UI, resulting in a 15% increase in user engagement',
+      'Implemented an autosave feature that reduced data loss incidents by 30% and improved overall data security',
+      'Conducted end-to-end testing with Cypress, achieving a 98% issue resolution rate before production',
+      'Used Sentry for real-time observability and applied responsive design best practices, improving mobile engagement by 20%',
     ],
   },
 ];
@@ -102,7 +115,7 @@ const Experience = () => {
 
         <Grid container spacing={3}>
           {experiences.map((exp, index) => (
-            <Grid item xs={12} md={exp.current ? 12 : 4} key={exp.company}>
+            <Grid item xs={12} md={exp.current ? 12 : 6} key={exp.company}>
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}

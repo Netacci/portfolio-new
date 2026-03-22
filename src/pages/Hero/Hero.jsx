@@ -125,8 +125,7 @@ const Hero = () => {
             >
               HXConnect
             </Box>
-            {' '}— making healthcare accessible across Nigeria. 50+ microservices,
-            6 frontend portals. Previously at{' '}
+            {' '}— making healthcare accessible across Nigeria. Previously at{' '}
             <Box component='span' sx={{ color: '#e5e7eb', fontWeight: 500 }}>
               Mozilla
             </Box>

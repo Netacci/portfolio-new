@@ -89,7 +89,8 @@ const Banner = () => {
           >
             Open to fullstack and frontend roles. Available for freelance. If
             you&apos;re building something that needs a strong engineer who can
-            own a problem end-to-end, let&apos;s talk.
+            own a problem end-to-end, ship fast, and build for scale,
+            let&apos;s talk.
           </Typography>
 
           {/* Primary CTA */}

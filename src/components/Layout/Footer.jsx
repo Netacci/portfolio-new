@@ -30,7 +30,7 @@ const Footer = () => {
           <Typography
             sx={{ color: '#4b5563', fontSize: '0.85rem' }}
           >
-            &copy; {new Date().getFullYear()} Chineta Adinnu. Built with React.
+            &copy; {new Date().getFullYear()} Chineta Adinnu.
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 0.5 }}>

@@ -92,16 +92,16 @@ export const featuredProjects = [
   },
   {
     number: '06',
-    name: 'SupplyAI',
-    company: 'SupplyAI · USA',
+    name: 'Optiverifi',
+    company: 'Optiverifi · USA',
     companyColor: '#8b5cf6',
     problem:
       'B2B procurement is slow and opaque. Buyers have no efficient way to find verified, capability-matched suppliers without manual sourcing. The platform needed to serve three different user types (public visitors, paying buyers, and internal admins) from a single coherent system.',
     solution:
-      'Built 4 applications end-to-end: a public marketing site with a paywall/preview flow where unauthenticated users see a teaser of their match results before signing up, a buyer dashboard for procurement requests, AI match reports, subscriptions and billing, an internal admin dashboard covering suppliers, plans, users, and transactions, and a backend with a two-phase AI matching engine. Pre-payment uses rule-based keyword scoring; post-payment calls Groq (llama-3.3-70b) for semantic capability scoring with AI-generated match explanations. Stripe for payments, Resend for transactional email, JWT auth with separate admin and customer roles.',
+      'Built 4 applications end-to-end: a public marketing site with a paywall/preview flow where unauthenticated users see a teaser of their match results before signing up, a buyer dashboard for procurement requests, AI match reports, subscriptions and billing, an internal admin dashboard covering suppliers, plans, users, and transactions, and a backend with a two-phase AI matching engine. Pre-payment uses rule-based keyword scoring; post-payment calls the ChatGPT API for semantic capability scoring with AI-generated match explanations. Stripe for payments, Resend for transactional email, JWT auth with separate admin and customer roles.',
     impact:
       'In progress. Complete architecture for a production-ready B2B SaaS platform: 3 frontend apps, 1 API, AI matching, payments, and auth all working in concert.',
-    tags: ['Next.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'Groq AI', 'Stripe', 'Tailwind CSS', 'JWT'],
+    tags: ['Next.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'ChatGPT API', 'Stripe', 'Tailwind CSS', 'JWT'],
     cardColor: '#0f0a1e',
     accentColor: '#8b5cf6',
   },

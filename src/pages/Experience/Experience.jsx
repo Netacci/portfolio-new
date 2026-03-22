@@ -31,7 +31,7 @@ const experiences = [
   },
   {
     company: 'Mozilla',
-    role: 'Frontend Engineer',
+    role: 'Software Engineer',
     period: '2024',
     color: '#ff6611',
     highlights: [

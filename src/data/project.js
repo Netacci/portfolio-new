@@ -17,7 +17,7 @@ export const featuredProjects = [
       'Used actively by Mozilla\'s performance engineering team to catch regressions before they reach millions of Firefox users.',
     tags: ['React', 'Django', 'PostgreSQL', 'TypeScript', 'Accessibility'],
     live: 'https://perf.compare/',
-    github: 'https://github.com/mozilla/treeherder/issues?q=state%3Aclosed%20is%3Apr%20author%3A%40me',
+    github: 'https://github.com/mozilla/treeherder/issues?q=state%3Aclosed%20is%3Apr%20author%3A%40netacci',
     cardColor: '#1a1033',
     accentColor: '#ff6611',
   },
